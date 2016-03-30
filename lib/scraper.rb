@@ -30,10 +30,10 @@ for i in 0..url.length-1 do
  image2 = images[1]
 
  puts brand + " " + model + " " + price + " " + description + " " + image1 + " " + image2
- # puts brand
- # puts model
- # puts price
- # puts description
- # puts image1
- # puts image2
+ puts brand
+ puts model
+ puts price
+ puts description
+ puts image1
+ puts image2
 end
