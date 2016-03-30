@@ -6,22 +6,48 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Product.destroy_all
 
 
 #### Create Product Dummy Data ####
-products_list = [
-  ["shoes", "sneakers", "Margiela", "Replica1", "My shoe description1 My shoe description1 My shoe description1 My shoe description1", 550, "http://product-images.barneys.com/is/image/Barneys/503226706_product_1?$pdp_flexH$", "http://images.bigcartel.com/bigcartel/product_images/165203293/max_h-1000+max_w-1000/IMG_1846.JPG"],
-  ["shoes", "sneakers", "Margiela", "Replica2", "My shoe description My shoe description2 My shoe description2 My shoe description2", 4000, "http://product-images.barneys.com/is/image/Barneys/503226706_product_1?$pdp_flexH$", "http://images.bigcartel.com/bigcartel/product_images/165203293/max_h-1000+max_w-1000/IMG_1846.JPG"],
-  ["shoes", "sneakers", "Margiela", "Replica3", "My shoe description3 My shoe description3 My shoe description3 My shoe description3", 400, "http://product-images.barneys.com/is/image/Barneys/503226706_product_1?$pdp_flexH$", "http://images.bigcartel.com/bigcartel/product_images/165203293/max_h-1000+max_w-1000/IMG_1846.JPG"],
-  ["shoes", "sneakers", "Margiela", "Replica4", "My shoe description4 My shoe description4 My shoe description4 My shoe description4", 900, "http://product-images.barneys.com/is/image/Barneys/503226706_product_1?$pdp_flexH$", "http://images.bigcartel.com/bigcartel/product_images/165203293/max_h-1000+max_w-1000/IMG_1846.JPG"],
-  ["shoes", "sneakers", "Margiela", "Replica5", "My shoe description5 My shoe description5 My shoe description5 My shoe description5", 1500, "http://product-images.barneys.com/is/image/Barneys/503226706_product_1?$pdp_flexH$", "http://images.bigcartel.com/bigcartel/product_images/165203293/max_h-1000+max_w-1000/IMG_1846.JPG"],
-  ["shoes", "sneakers", "Margiela", "Replica6", "My shoe description6 My shoe description6 My shoe description6 My shoe description6", 3300, "http://product-images.barneys.com/is/image/Barneys/503226706_product_1?$pdp_flexH$", "http://images.bigcartel.com/bigcartel/product_images/165203293/max_h-1000+max_w-1000/IMG_1846.JPG"]
-]
+require 'nokogiri'
+require 'open-uri'
+
+Product.destroy_all
+
+# @master.each do |category, category_type, brand, model, description, price, image1, image2|
+#   Product.create(category: category, category_type: category_type, brand: brand, model: model, description: description, price: price, image1: image1, image2: image2)
+# end
 
 
-products_list.each do |category, category_type, brand, model, description, price, image1, image2|
-  Product.create(category: category, category_type: category_type, brand: brand, model: model, description: description, price: price, image1: image1, image2: image2)
+ doc = Nokogiri::HTML(open("http://www.giuseppezanottidesign.com/us/man/category/sneakers"))
+
+ begining_url = "http://www.giuseppezanottidesign.com/"
+
+ ending_url = doc.css(".product .inner figure.native-hover a").map{|link| link["href"]}
+
+ url = []
+
+ for i in 0..ending_url.length-1 do
+  url.push(begining_url + ending_url[i])
 end
+
+
+# print url.count
+
+for i in 0..url.length-1 do
+ doc = Nokogiri::HTML(open(url[i]))
+ brand = "Giuseppe Zanotti"
+ model = doc.at_css(".h1").content
+ description = doc.at_css(".long-description p").content
+ price = doc.at_css(".prices .price").content.gsub(/[$]/, "")
+ price = (price, precision: 2)
+ print price
+ images = doc.css(".images a").map{|links| links["data-image"]}
+ image1 = images[0].slice(2, images[0].length)
+ image2 = images[1].slice(2, images[1].length)
+
+Product.create(category: "shoes", category_type: "sneakers", brand: brand, model: model, description: description, price: price, image1: image1, image2: image2)
+end
+
 
 
