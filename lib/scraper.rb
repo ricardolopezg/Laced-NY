@@ -26,6 +26,7 @@ for i in 0..url.length-1 do
  print price
  puts "    "
  images = doc.css(".images a").map{|links| links["data-image"]}
+
  image1 = images[0].slice(2, images[0].length)
  image2 = images[1].slice(2, images[1].length)
 
@@ -35,4 +36,5 @@ for i in 0..url.length-1 do
 end
 
 # print @master
+
 
