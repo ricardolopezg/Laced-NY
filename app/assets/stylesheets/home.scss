@@ -1,3 +1,171 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#rightContainer {
+  /*border: 1px solid black;*/
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom:0px;
+    #image {
+      /*border: 1px solid red;*/
+      width: 90%;
+      height: 100%;
+      position: relative;
+      top: -10%;
+      left: 45%;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+    }
+}
+
+#leftContainer {
+  /*border: 5px solid gray;*/
+  background-color: black;
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: -60%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  box-shadow: 10px 0px 50px black;
+  transform: skewX(-35deg);
+  transition: width 2s;
+      svg {
+      position: fixed;
+      left: 200px;
+    }
+}
+
+#leftContainer:hover {
+  /*left: -40%;*/
+  width: 120%;
+}
+
+#link {
+  /*border: 1px solid black;*/
+  /*display: inline-block;*/
+  position: relative;
+  bottom: 0px;
+  left: 50px;
+  /*top:20px;*/
+  /*text-align: right;*/
+  /*right: 10%;*/
+    span {
+      /*text-align: right;*/
+      position: relative;
+      left: 35%;
+      font-size: 15px;
+      font-family: Zapfino;
+    }
+}
+  .logo {
+    transform: skewX(35deg);
+    stroke: white;
+    fill: white;
+  }
+
+  p {
+    width: 400px;
+    position: absolute;
+    color: white;
+    top: 40%;
+    text-align: center;
+    right: 60px;
+    font-size: 15px;
+    /*transform: skewX(15deg);*/
+  }
+
+
+/*.box {
+    border: 1px solid black;
+    width: 880px;
+    height: 330px;
+    border-radius: .5em;
+}
+
+.sunrise {
+    position: absolute; */ /* remove from flow so sunset is placed on top */
+
+    /*background-color:  green;*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, .7);*/
+/*}*/
+
+/*.slider {*/
+    /* set initial width */
+    /*width: 520px;*/
+    /*background-color: blue;*/
+    /* hide the content that overflows (to allow second box to show through) */
+   /*overflow: hidden;*/
+   /*display: inline-block;*/
+
+    /* skew container so that it has angled edge, and set up transition */
+   /*transform: skewX(-20deg);*/
+   /*transition: width 1.2s ease-in-out;*/
+/*}*/
+
+/*.sunset {*/
+    /* skew back by negative of parent’s skew so contents is upright */
+    /*transform: skewX(20deg);*/
+    /*margin-left: 76px;  give margin to push content away from left slanted edge */
+   /*background-color: yellow;*/
+   /*pointer-events: auto;     allow pointer events for the box */
+/*}*/
+
+/*.slider {*/
+    /* give negative margin to remove gap caused by left hand skew */
+    /*margin-left: -76px;*/
+
+   /* hide pointer events for unseen content */
+/*   pointer-events: none;
+}
+
+.slider:hover {
+    width: 760px;
+}
+
+.sunrise:hover + .slider {
+    width: 250px;
+}*/
+
+#intro {
+  /*border: 1px solid black;*/
+  background-color:black;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  width: 100%;
+  /*text-align: center;*/
+}
+
+.laced {
+  fill: white;
+  /*fill-opacity: 1;*/
+  stroke: Ghostwhite;
+  stroke-width: 0.5px;
+  /*stroke-dasharray: 300;*/
+  /*stroke-dashoffset: 0;*/
+  animation: variable 4s linear;
+}
+
+@keyframes variable {
+  from {
+    fill-opacity:0;
+    stroke-dasharray: 600;
+    /*stroke-dashoffset: 0;*/
+  }
+  to {
+    fill-opacity: 1;
+    stroke-dasharray: 200;
+    /*stroke-dashoffset:300;*/
+  }
+}
