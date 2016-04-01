@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+    $("#intro").fadeOut(20)
+  // $("#intro").delay(4000).fadeOut(2000)
 
   var $grid = $('.grid').masonry({
     itemSelector: '.grid-item',
