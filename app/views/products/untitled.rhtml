@@ -1,0 +1,15 @@
+<%= form_tag(products_path, method: :get) do %>
+  <%= check_box_tag(:brand, "Giuseppe Zanotti") %> 
+  <%= label_tag(:brand, "Giuseppe Zanotti") %><br>
+  <%= check_box_tag(:brand, "Louis Vuitton") %> 
+  <%= label_tag(:brand, "Louis Vuitton") %><br>
+  <%= check_box_tag(:brand, "Maison Margiella") %> 
+  <%= label_tag(:brand, "Maison Margiella") %><br>
+  <%= check_box_tag(:brand, "Yeezy") %> 
+  <%= label_tag(:brand, "Yeezy") %><br>
+  <%= submit_tag("Filter") %>
+<% end %>
+
+
+
+ <%= p_helper(p.model) %>

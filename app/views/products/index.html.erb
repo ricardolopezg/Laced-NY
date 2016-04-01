@@ -1,2 +1,74 @@
 <!-- DISPLAY ALL PRODUCTS -->
 <!-- FILTERING OF PRODUCTS AND MODAL FOR INDIVIDUAL PRODUCTS -->
+
+<div class = "page_wrapper">
+  <div class = "sidebar">
+    <div class = "brand_filter_container">
+    <%= h1_helper("LOGO") %>
+    <%= h3_helper("Filter By:") %><br>
+    <%= h4_helper("Brand") %>
+    <%= form_tag(products_path, method: :get, id: "test") do %>
+      <%= check_box_tag(:all_brands_checkbox, "All Brands", true) %> 
+      <%= label_tag(:all_brands_checkbox, "All Brands") %><br>
+      <%= check_box_tag(:giuseppe_zanotti_checkbox, "Giuseppe Zanotti", false) %> 
+      <%= label_tag(:brand, "Giuseppe Zanotti") %><br>
+      <%= check_box_tag(:louis_vuitton_checkbox, "Louis Vuitton", false) %> 
+      <%= label_tag(:brand, "Louis Vuitton") %><br>
+      <%= check_box_tag(:maison_margiella_checkbox, "Maison Margiella", false) %> 
+      <%= label_tag(:brand, "Maison Margiella") %><br>
+      <%= check_box_tag(:yeezy_checkbox, "Yeezy", false) %> 
+      <%= label_tag(:brand, "Yeezy") %><br>
+    <% end %>
+    </div>
+  </div>
+
+<!-- ALL PRODUCTS ON PAGE LOAD -->
+  <div class = "products_container products_container_all products_container_all_toggle">
+    <% @products.each do |p| %>
+        <div class = "product_image_container">
+          <%= image_tag(p.image1, class: "product_image") %>
+          <%= p_helper(p.model) %>
+        </div>
+    <% end %>
+  </div>
+
+<!-- Run indpendent loop for each brand to ensure alphabetical order -->
+  <div class = "products_container">
+    <!-- SHOW GIUSEPPE ZANOTTI PRODUCTS -->
+    <% @products.each do |p| %>
+      <% if p.brand == "Giuseppe Zanotti" %>
+        <div class = "product_image_container giuseppe_zanotti_display giuseppe_zanotti_toggle">
+          <%= image_tag(p.image1, id: "giuseppe_zanotti_img1", class: "product_image") %>
+          <%= p_helper(p.model) %>
+        </div>
+      <% end %>
+    <% end %>
+    <!-- SHOW LOUIS VUITTON PRODUCTS -->
+    <% @products.each do |p| %>
+      <% if p.brand == "Louis Vuitton" %>
+        <div class = "product_image_container louis_vuitton_display louis_vuitton_toggle">
+          <%= image_tag(p.image1, id: "louis_vuitton_img1", class: "product_image") %>
+          <%= p_helper(p.model) %>
+        </div>
+      <% end %>
+    <% end %>
+    <!-- SHOW MAISON MARGIELLA PRODUCTS -->
+    <% @products.each do |p| %>
+      <% if p.brand == "Maison Margiella" %>
+        <div class = "product_image_container maison_margiella_display maison_margiella_toggle">
+          <%= image_tag(p.image1, id: "maison_margiella_img1", class: "product_image") %>
+          <%= p_helper(p.model) %>
+        </div>
+      <% end %>
+    <% end %>
+      <!-- SHOW YEEZY PRODUCTS -->
+    <% @products.each do |p| %>
+      <% if p.brand == "Yeezy" %>
+        <div class = "product_image_container yeezy_display yeezy_toggle">
+          <%= image_tag(p.image1, id: "yeezy_img1", class: "product_image") %>
+          <%= p_helper(p.model) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
