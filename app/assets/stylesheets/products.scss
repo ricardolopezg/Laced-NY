@@ -2,7 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// ALL PRODUCTS PAGE
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
 
+.page_wrapper {
+  margin: 0;
+}
+
+.sidebar {
+  height: 100%;
+  background: yellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // bottom: 0;
+  width: 200px; // width optional but recommended 
+}
+
+.products_container {
+  margin: 0 0 250px 0; // must agree with previous width 
+  position: absolute;
+  top: 0;
+  left: 220px;
+}
+
+.product_image_container {
+  border: 1px solid red;
+  float: left;
+  p {
+    text-align: center;
+    width: 240px;
+    position: relative;
+    top: -235px;
+  }
+}
+
+.product_image {
+  // border: 1px solid green;
+  height: 240px;
+  width: 240px;
+}
+
+.products_container_all_display, .giuseppe_zanotti_display, .louis_vuitton_display, .maison_margiella_display, .yeezy_display {
+  display:none;
+}
+
+// MASONRY
 * { box-sizing: border-box; }
 
 body { font-family: sans-serif; }
