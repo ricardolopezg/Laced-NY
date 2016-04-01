@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// ALL PRODUCTS PAGE
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -49,3 +50,57 @@ p, h1, h2, h3, h4, h5, h6 {
   display:none;
 }
 
+// MASONRY
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #EEE;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 250px;
+  height: 250px;
+  float: left;
+  background: green;
+}
+
+.grid-item--width2 { width: 320px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 300px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+
+
+.grid-item--gigante {
+  width: 500px;
+  height: 500px;
+}
+
+// .grid-item:hover {
+//   background: #A2C;
+// }
+
+
+.desc{
+  display: none
+}
+
+.image_size {
+  width: 100%;
+  height: 100%;
+}
