@@ -4,18 +4,6 @@ $(document).ready(function() {
   // $("#intro").delay(4000).fadeOut(2000)
 
 // ISOTOPE
-  // $('.grid').isotope({
-  //   itemSelector: '.grid-item',
-  //   masonry: {
-  //     columnWidth: 200
-  //   }
-  // });
-  // external js: isotope.pkgd.js
-
-  // init Isotope
-  // external js: isotope.pkgd.js
-
-  // init Isotope
   var $container = $('.isotope').isotope({
     itemSelector: '.product-item',
     layoutMode: 'fitRows',
