@@ -8,48 +8,54 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+#logo {
+  font-family: distant_stroke;
+  font-size: 90px;
+  color: #fff;
+  margin: 0 15px;
+}
+
+hr {
+  width: 80%;
+  margin-top: 20px;
+}
+
 .page_wrapper {
   margin: 0;
 }
 
 .sidebar {
-  height: 100%;
   background: #000;
   position: fixed;
   top: 0;
   left: 0;
-  // bottom: 0;
-  width: 200px; // width optional but recommended 
+  height: 100%;
+  width: 200px; 
+  opacity: .9;
+}
+
+.filter_select_container {
+  width: 100%;
+  margin: 10%;
+  hr {
+    margin: 0;
+  }
 }
 
 .products_container {
-  margin: 0 0 250px 0; // must agree with previous width 
+  margin: 0 0 250px 0; // must agree with .sidebar width 
   position: absolute;
   top: 0;
   left: 220px;
 }
 
-// .product_image_container {
-//   border: 1px solid red;
-//   float: left;
-//   p {
-//     text-align: center;
-//     width: 240px;
-//     position: relative;
-//     top: -235px;
-//   }
-// }
+
 
 .product_image {
   // border: 1px solid green;
   height: 100%;
   width: 100%;
 }
-
-// .products_container_all_display, .giuseppe_zanotti_display, .louis_vuitton_display, .maison_margiella_display, .yeezy_display {
-//   display:none;
-// }
-
 
 
 // ISOTOPE
@@ -62,17 +68,15 @@ body {
 /* ---- button ---- */
 
 .button {
-  display: inline-block;
   padding: 0.5em 1.0em;
-  background: #EEE;
+  background: #000;
   border: none;
-  border-radius: 7px;
   background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
-  color: #222;
-  font-family: sans-serif;
-  font-size: 16px;
-  text-shadow: 0 1px white;
-  cursor: pointer;
+  color: #fff;
+  font-family: vonique64;
+  font-size: 20px;
+  height: 80px;
+  width: 160px;
 }
 
 .button:hover {
@@ -83,12 +87,12 @@ body {
 
 .button:active,
 .button.is-checked {
-  background-color: #28F;
+  background-color: pink;
 }
 
 .button.is-checked {
-  color: white;
-  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+  color: #000;
+  // text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
 }
 
 .button:active {
@@ -110,8 +114,8 @@ body {
   margin-right: 1px;
 }
 
-.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
-.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+// .button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
+// .button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
 
 /* ---- products_container ---- */
 
@@ -138,8 +142,6 @@ body {
   height: 275px;
   margin: 5px;
   padding: 10px;
-  // background: #888;
-  // color: #262524;
 }
 
 .product-item > * {
