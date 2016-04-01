@@ -1,5 +1,5 @@
 $(document).ready(function() {
-// LANDING PAGE  
+// LANDING PAGE
     $("#intro").fadeOut(20)
   // $("#intro").delay(4000).fadeOut(2000)
 
@@ -18,7 +18,6 @@ $(document).ready(function() {
       }
     }
   });
-
   // filter functions
   var filterFns = {
     // show if number is greater than 50
@@ -32,7 +31,6 @@ $(document).ready(function() {
       return name.match( /ium$/ );
     }
   };
-
   // bind filter button click
   $('#filters').on( 'click', 'button', function() {
     var filterValue = $( this ).attr('data-filter');
@@ -40,13 +38,12 @@ $(document).ready(function() {
     filterValue = filterFns[ filterValue ] || filterValue;
     $container.isotope({ filter: filterValue });
   });
-
   // bind sort button click
   $('#sorts').on( 'click', 'button', function() {
     var sortByValue = $(this).attr('data-sort-by');
     $container.isotope({ sortBy: sortByValue });
   });
-  
+
   // change is-checked class on buttons
   $('.button-group').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );
@@ -55,9 +52,4 @@ $(document).ready(function() {
       $( this ).addClass('is-checked');
     });
   });
-  
-
-
-
-
-}); // end doc ready
+});
