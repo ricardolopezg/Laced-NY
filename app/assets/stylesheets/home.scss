@@ -30,7 +30,7 @@
   background-color: black;
   opacity: 0.9;
   height: 100%;
-  width: 100%;
+  width: 120%;
   position: absolute;
   left: -60%;
   top: 0px;
@@ -39,28 +39,23 @@
   box-shadow: 10px 0px 50px black;
   transform: skewX(-35deg);
   transition: width 2s;
-      svg {
-      position: fixed;
-      left: 200px;
-    }
+  svg {
+    position: fixed;
+    left: 200px;
+  }
 }
 
-#leftContainer:hover {
-  /*left: -40%;*/
-  width: 120%;
+#rightContainer:hover + #leftContainer{
+  width: 100%;
 }
 
+/* =========fade in intro on load of page============= */
 #link {
   /*border: 1px solid black;*/
-  /*display: inline-block;*/
   position: relative;
   bottom: 0px;
   left: 50px;
-  /*top:20px;*/
-  /*text-align: right;*/
-  /*right: 10%;*/
     span {
-      /*text-align: right;*/
       position: relative;
       left: 35%;
       font-size: 15px;
@@ -73,68 +68,22 @@
     fill: white;
   }
 
-  p {
+  #text {
+    /*border:1px solid red;*/
     width: 400px;
     position: absolute;
     color: white;
     top: 40%;
-    text-align: center;
-    right: 60px;
+    text-align: right;
+    right: 190px;
     font-size: 15px;
-    /*transform: skewX(15deg);*/
+    transform: translate(0%);
+    transition: transform 2s;
   }
 
-
-/*.box {
-    border: 1px solid black;
-    width: 880px;
-    height: 330px;
-    border-radius: .5em;
+#rightContainer:hover + #leftContainer > #text{
+  transform: translate(35%);
 }
-
-.sunrise {
-    position: absolute; */ /* remove from flow so sunset is placed on top */
-
-    /*background-color:  green;*/
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, .7);*/
-/*}*/
-
-/*.slider {*/
-    /* set initial width */
-    /*width: 520px;*/
-    /*background-color: blue;*/
-    /* hide the content that overflows (to allow second box to show through) */
-   /*overflow: hidden;*/
-   /*display: inline-block;*/
-
-    /* skew container so that it has angled edge, and set up transition */
-   /*transform: skewX(-20deg);*/
-   /*transition: width 1.2s ease-in-out;*/
-/*}*/
-
-/*.sunset {*/
-    /* skew back by negative of parent’s skew so contents is upright */
-    /*transform: skewX(20deg);*/
-    /*margin-left: 76px;  give margin to push content away from left slanted edge */
-   /*background-color: yellow;*/
-   /*pointer-events: auto;     allow pointer events for the box */
-/*}*/
-
-/*.slider {*/
-    /* give negative margin to remove gap caused by left hand skew */
-    /*margin-left: -76px;*/
-
-   /* hide pointer events for unseen content */
-/*   pointer-events: none;
-}
-
-.slider:hover {
-    width: 760px;
-}
-
-.sunrise:hover + .slider {
-    width: 250px;
-}*/
 
 #intro {
   /*border: 1px solid black;*/
@@ -154,7 +103,7 @@
   stroke-width: 0.5px;
   /*stroke-dasharray: 300;*/
   /*stroke-dashoffset: 0;*/
-  animation: variable 4s linear;
+  animation: variable 3s linear;
 }
 
 @keyframes variable {
@@ -169,3 +118,5 @@
     /*stroke-dashoffset:300;*/
   }
 }
+
+/* ================================ */

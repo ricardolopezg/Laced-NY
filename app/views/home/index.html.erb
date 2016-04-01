@@ -3,12 +3,12 @@
 
 <div id="rightContainer">
   <div id="image">
-    <img src="http://<%= @products %>">
-    <div id="link"><span>View Collection</span></div>
+    <img src="http://<%= @logo %>">
+    <div id="link"><span><%= link_to("View Collection", products_path, method: :get)%></span></div>
   </div>
 </div>
 <div id="leftContainer">
-  <p>
+  <p id="text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vehicula lorem vitae luctus rutrum. Vestibulum luctus imperdiet feugiat. Praesent et eleifend dolor, nec tristique justo. Duis varius a purus sit amet scelerisque. Nullam tincidunt elit a orci feugiat, ac laoreet dolor rhoncus. Nunc sed euismod erat. Etiam auctor sapien vel ante euismod, eget consectetur eros imperdiet. Aliquam erat volutpat.
 </p>
   <svg width="100%" height="1300px" viewBox="0 0 900 3000">
