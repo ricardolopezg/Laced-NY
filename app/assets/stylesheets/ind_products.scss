@@ -14,17 +14,45 @@
     bottom:0px;
       #image {
         /*border: 1px solid red;*/
-        width: 90%;
-        height: 100%;
-        position: relative;
-        top: -10%;
-        left: 45%;
+        width: 800px;
+        height: 80%;
+        position: absolute;
+        top: 0%;
+        right: 0px;
           img {
-            max-width: 100%;
+            /*border:1px solid green;*/
+            position: relative;
+            z-index: 0;
+            transform: translate(30%);
+
+            max-width: 130%;
             max-height: 100%;
           }
       }
   }
+
+  #link {
+    /*border: 1px solid black;*/
+    position: relative;
+    text-align: center;
+    padding-right: 5%;
+      span {
+        font-size: 15px;
+        font-family: Zapfino;
+      }
+  }
+
+#logo5 {
+  /*border: 1px solid black;*/
+  position: relative;
+  z-index: 1;
+  float: right;
+  margin-top: 50px;
+  margin-right: 100px;
+  font-family: Zapfino;
+  font-size: 50px;
+}
+
 
   #leftContainer {
     /*border: 5px solid gray;*/
@@ -40,10 +68,15 @@
     box-shadow: 10px 0px 50px black;
     transform: skewX(-35deg);
     transition: width 2s;
-    svg {
-      position: fixed;
-      left: 200px;
-    }
+    text-align: right;
+    padding-right: 25%;
+      #descriptionBox {
+        transform: skewX(35deg);
+        border:1px solid white;
+        h1, h3 {
+          color:white;
+        }
+      }
   }
 
   #rightContainer:hover + #leftContainer{
@@ -51,18 +84,6 @@
   }
 
   /* =========fade in intro on load of page============= */
-  #link {
-    /*border: 1px solid black;*/
-    position: relative;
-    bottom: 0px;
-    left: 50px;
-      span {
-        position: relative;
-        left: 35%;
-        font-size: 15px;
-        font-family: Zapfino;
-      }
-  }
 
   .logo {
     transform: skewX(35deg);
@@ -74,7 +95,7 @@
     /*border:1px solid red;*/
     width: 400px;
     position: absolute;
-    color: white;
+    color: yellow;
     top: 40%;
     text-align: right;
     right: 190px;

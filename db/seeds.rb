@@ -13,7 +13,7 @@ require 'open-uri'
 
 Product.destroy_all
 
-######### Giuseppe Zanotti 
+######### Giuseppe Zanotti
  zanotti_sneakers = Nokogiri::HTML(open("http://www.giuseppezanottidesign.com/us/man/category/sneakers"))
  zanotti_begining_url = "http://www.giuseppezanottidesign.com/"
  zanotti_ending_url = zanotti_sneakers.css(".product .inner figure.native-hover a").map{|link| link["href"]}
@@ -27,7 +27,11 @@ for i in 0..zanotti_url.length-1 do
  doc = Nokogiri::HTML(open(zanotti_url[i]))
  brand = "Giuseppe Zanotti"
  model = doc.at_css(".h1").content
- description = doc.at_css(".long-description p").content
+ if doc.at_css(".long-description p").content == ""
+   description = doc.at_css(".long-description div").content
+ else
+   description = doc.at_css(".long-description p").content
+ end
  price = doc.at_css(".prices .price").content.gsub(/[$]/, "")
  images = doc.css(".images a").map{|links| links["data-image"]}
  image1 = "http:" + images[0]
@@ -37,7 +41,7 @@ Product.create(category: "shoes", category_type: "sneakers", brand: brand, model
 end
 
 
-######### Maison Margiela 
+######### Maison Margiela
 
 maison_margiela_sneakers = Nokogiri::HTML(open("http://www.neimanmarcus.com/Maison-Margiela/Mens/Shoes/cat48130739/c.cat"))
 margiela_begining_url = "http://www.neimanmarcus.com/"
@@ -48,7 +52,7 @@ for i in 0..margiela_ending_url.length-1 do
   margiela_url.push(margiela_begining_url + margiela_ending_url[i])
 end
 
-for i in 0..margiela_url.length-1 do 
+for i in 0..margiela_url.length-1 do
   maison_margiela_sneaker = Nokogiri::HTML(open(margiela_url[i]))
   brand = "Maison Margiella"
   model = maison_margiela_sneaker.at_css(".product-name span").content

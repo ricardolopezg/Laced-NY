@@ -2,6 +2,7 @@ $(document).ready(function() {
 // LANDING PAGE
     $("#intro").fadeOut(20)
   // $("#intro").delay(4000).fadeOut(2000)
+
 // ISOTOPE
   var $container = $('.isotope').isotope({
     itemSelector: '.product-item',
@@ -51,3 +52,4 @@ $(document).ready(function() {
       $( this ).addClass('is-checked');
     });
   });
+});
