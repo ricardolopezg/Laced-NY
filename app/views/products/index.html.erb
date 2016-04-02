@@ -1,7 +1,7 @@
 <!-- DISPLAY ALL PRODUCTS -->
 
 <div id="filters" class="button-group sidebar">
-  <div class = "filter_select_container">  
+  <div class = "filter_select_container">
     <hr><p id = "logo">Laced</p><hr><br><br><br>
     <button class="button is-checked" data-filter="*">All Brands</button><br><br><br>
     <button class="button" data-filter=".giuseppe_zanotti">Giuseppe Zanotti</button><br><br><br>
@@ -10,7 +10,6 @@
     <button class="button" data-filter=".yeezy">Yeezy</button>
   </div>
 </div>
-
 
 <div class="isotope">
   <!-- SHOW GIUSEPPE ZANOTTI PRODUCTS -->
@@ -50,7 +49,7 @@
         </a>
       <% end %>
     <% end %>
-     
+
   <!-- SHOW YEEZY PRODUCTS -->
   <% @products.each do |p| %>
     <% if p.brand == "Yeezy" %>
