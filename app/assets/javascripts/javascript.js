@@ -68,8 +68,16 @@ $(document).ready(function() {
     });
   });
   
-
-
-
+$('a').hover(function() {
+     // in
+     $(this).find('.text-content').show();
+  }, function() {
+     // out
+     $(this).find('.text-content').hide();
+  }
+);
 
 }); // end doc ready
+
+
+

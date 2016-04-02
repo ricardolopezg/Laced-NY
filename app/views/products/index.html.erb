@@ -17,7 +17,7 @@
         <a href= <%= product_path(p.id) %>>
           <div class = "product-item giuseppe_zanotti" data-category="giuseppe_zanotti">
             <%= image_tag(p.image1, id: "giuseppe_zanotti_img1", class: "product_image") %>
-            <%= p_helper(p.model) %>
+            <div class="text-content"><%= p_helper(p.model) %></div>
           </div>
         </a>
       <% end %>

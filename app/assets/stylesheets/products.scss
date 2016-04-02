@@ -145,6 +145,7 @@ body {
 .product-item > * {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .product-item .name {
@@ -179,6 +180,15 @@ body {
   top: 76px;
   font-size: 12px;
 }
+
+.text-content{
+  color: green;
+  height: 50px;
+  // left: 0;
+  // position: absolute;
+  display: none;
+}
+
 
 // .product-item.giuseppe_zanotti { 
 //   background: #F00; 
