@@ -1,6 +1,11 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 
 // ALL PRODUCTS PAGE
 body {
@@ -13,12 +18,7 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-#logo {
-  font-family: distant_stroke;
-  font-size: 90px;
-  color: #fff;
-  margin: 0 15px;
-}
+
 
 hr {
   width: 80%;
@@ -39,20 +39,19 @@ hr {
   opacity: .9;
 }
 
-.filter_select_container {
-  width: 100%;
-  margin: 10%;
-  hr {
-    margin: 0;
-  }
-}
+// .filter_select_container {
+//   width: 100%;
+//   margin: 10%;
+//   hr {
+//     margin: 0;
+//   }
+// }
 
-.products_container {
-  margin: 0 0 250px 0; // must agree with .sidebar width
-  position: absolute;
-  top: 0;
-  left: 220px;
-}
+// .products_container {
+//   border: 1px solid yellow;
+//   position: relative;
+//   right: 0px;
+// }
 
 
 
@@ -65,10 +64,6 @@ hr {
 
 // ISOTOPE
 * { box-sizing: border-box; }
-
-body {
-  font-family: sans-serif;
-}
 
 /* ---- button ---- */
 
@@ -132,8 +127,7 @@ body {
 .isotope {
   // border: 1px solid black;
   position: relative;
-  top: 0;
-  left: 220px;
+  left: 210px;
 }
 
 /* clear fix */
@@ -200,3 +194,34 @@ body {
 // .product-item.maison_margiella      { background: #FF0; background: hsl(  72, 100%, 50%); }
 // .product-item.yeezy        { background: #0F0; background: hsl( 108, 100%, 50%); }
 
+
+/* this is css for intro fade in effect. this was moved from the ind products css file. if merge conflict, remove from ind products css page and keep this one. */
+
+
+#intro {
+    border: 1px solid black;
+    background-color:black;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    width: 100%;
+  }
+
+  .laced {
+    fill: white;
+    stroke: Ghostwhite;
+    stroke-width: 0.5px;
+    animation: variable 3s linear;
+  }
+
+  @keyframes variable {
+    from {
+      fill-opacity:0;
+      stroke-dasharray: 600;
+    }
+    to {
+      fill-opacity: 1;
+      stroke-dasharray: 200;
+    }
+  }
