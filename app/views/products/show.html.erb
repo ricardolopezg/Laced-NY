@@ -5,7 +5,7 @@
   </div>
   <div id="image">
     <img src="<%= @product.image1 %>">
-    <div id="link"><span><%= link_to("Back", products_path, method: :get)%></span>
+    <div id="link"><span><a href="javascript:history.back()">Back</a></span>
     </div>
   </div>
 </div>
@@ -13,7 +13,7 @@
   <div id="descriptionBox">
     <h1><%= @product.model %></h1>
     <h4><%= @product.description %></h4>
-    <h4>$<%= @product.price %>0</h4>
+    <h2>$<%= @product.price %>0</h2>
   </div>
 
 </div>
