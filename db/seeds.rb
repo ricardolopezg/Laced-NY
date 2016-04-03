@@ -68,28 +68,28 @@ end
 
 
 ######### Louis Vitton
-louisvuitton_sneakers_website = Nokogiri::HTML(open("http://us.louisvuitton.com/eng-us/men/shoes/t/sneakers/to-3"))
-louisvuitton_sneakers_begining_url = "http://us.louisvuitton.com/"
-louisvuitton_sneakers_ending_url = louisvuitton_sneakers_website.css("div#products-grid div.pl-page a").map{|link| link["href"]}
+# louisvuitton_sneakers_website = Nokogiri::HTML(open("http://us.louisvuitton.com/eng-us/men/shoes/t/sneakers/to-3"))
+# louisvuitton_sneakers_begining_url = "http://us.louisvuitton.com/"
+# louisvuitton_sneakers_ending_url = louisvuitton_sneakers_website.css("div#products-grid div.pl-page a").map{|link| link["href"]}
 
-louisvuitton_sneakers_full_product_url = []
-for i in 0..louisvuitton_sneakers_ending_url.length-2 do
-  louisvuitton_sneakers_full_product_url.push(louisvuitton_sneakers_begining_url + louisvuitton_sneakers_ending_url[i])
-end
+# louisvuitton_sneakers_full_product_url = []
+# for i in 0..louisvuitton_sneakers_ending_url.length-2 do
+#   louisvuitton_sneakers_full_product_url.push(louisvuitton_sneakers_begining_url + louisvuitton_sneakers_ending_url[i])
+# end
 
-for i in 0..louisvuitton_sneakers_full_product_url.length-1 do
-  doc = Nokogiri::HTML(open(louisvuitton_sneakers_full_product_url[i]))
-  brand = doc.at('head meta[name="author"]')['content']
-  # print brand
-  model = doc.at("#productName h1").content
-  description = doc.at("#productPictures .productDescription").content
-  price = doc.at(".priceValue").content.gsub(/[$]/, "")
-  # image1 = doc.css('.zoomableContainer img').map{|i| i['src']}
-  image1 = doc.at('head meta[property="og:image"]')['content']
-  image2 = image1
+# for i in 0..louisvuitton_sneakers_full_product_url.length-1 do
+#   doc = Nokogiri::HTML(open(louisvuitton_sneakers_full_product_url[i]))
+#   brand = doc.at('head meta[name="author"]')['content']
+#   # print brand
+#   model = doc.at("#productName h1").content
+#   description = doc.at("#productPictures .productDescription").content
+#   price = doc.at(".priceValue").content.gsub(/[$]/, "")
+#   # image1 = doc.css('.zoomableContainer img').map{|i| i['src']}
+#   image1 = doc.at('head meta[property="og:image"]')['content']
+#   image2 = image1
 
-  Product.create(category: "shoes", category_type: "sneakers", brand: brand, model: model, description: description, price: price, image1: image1, image2: image2)
-end
+#   Product.create(category: "shoes", category_type: "sneakers", brand: brand, model: model, description: description, price: price, image1: image1, image2: image2)
+# end
 
 
 ######### Yeezy
