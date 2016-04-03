@@ -1,6 +1,6 @@
 <!-- META -->
 <% content_for :head do %>
-  <meta property="og:url" content="http://lacedny.herokuapp.com/<%= product_path(:id) %>" />
+  <meta property="og:url" content="http://lacedny.herokuapp.com<%= product_path(@product) %>" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<%= @product.model %>" />
   <meta property="og:description" content="<%= @product.description %>" />
@@ -45,7 +45,7 @@
     data-width="450"
     data-show-faces="true">
   </div> -->
-  <div class="fb-share-button" data-href="http://lacedny.herokuapp.com/" data-layout="button"></div>
+  <div class="fb-share-button" data-href="http://lacedny.herokuapp.com<%= product_path(@product) %>" data-layout="button"></div>
 
 </div>
 
