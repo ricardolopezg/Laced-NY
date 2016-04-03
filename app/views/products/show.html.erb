@@ -1,4 +1,35 @@
+<!-- META -->
+<% content_for :head do %>
+  <meta property="og:url" content="http://localhost:3000<%= product_path(:id) %>" />
+  <meta property="og:type" content="product.item" />
+  <meta property="og:title" content="<%= @product.model %>" />
+  <meta property="og:description" content="<%= @product.description %>" />
+  <meta property="og:image" content="<%= @product.image1 %>" />
+<% end %>
 
+<!-- FACEBOOK SDK -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '621104394706655',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+  
+
+
+<!-- INDIVIDUAL PRODUCT PAGE -->
 <div id="rightContainer">
   <div id="logo5">
     Laced
@@ -8,7 +39,17 @@
     <div id="link"><span><a href="javascript:history.back()">Back</a></span>
     </div>
   </div>
+  <!-- <div
+    class="fb-like"
+    data-share="true"
+    data-width="450"
+    data-show-faces="true">
+  </div> -->
+  <div class="fb-share-button" data-href="https://developers.facebook.com/docs/" data-layout="button"></div>
+
 </div>
+
+
 <div id="leftContainer">
   <div id="descriptionBox">
     <h1><%= @product.model %></h1>
