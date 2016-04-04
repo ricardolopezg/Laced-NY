@@ -14,8 +14,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #logo {
-  font-family: distant_stroke;
-  font-size: 90px;
+  font-family: "Diplomata+SC";
+  font-size: 70px;
   color: #fff;
   margin: 0 15px;
 }
@@ -41,7 +41,7 @@ hr {
 
 .filter_select_container {
   width: 100%;
-  margin: 10%;
+  // margin: 10%;
   hr {
     margin: 0;
   }
@@ -57,7 +57,6 @@ hr {
 
 .product_image {
   // border: 1px solid green;
-  height: 100%;
   width: 100%;
 }
 

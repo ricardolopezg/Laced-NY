@@ -2,49 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // REQUEST PRODUCT - CONTACT PAGE
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-}
-
-#logo {
-  font-family: distant_stroke;
-  font-size: 90px;
-  color: #fff;
-  margin: 0 15px;
-}
-
-hr {
-  width: 80%;
-  margin-top: 20px;
-}
-
-.page_wrapper {
-  margin: 0;
-}
-
-.sidebar {
-  background: #000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 200px;
-  opacity: .9;
-}
-
-.filter_select_container {
-  width: 100%;
-  margin: 10%;
-  hr {
-    margin: 0;
-  }
-}
 
 .contact_link {
   position: relative;
