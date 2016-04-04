@@ -1,23 +1,7 @@
 $(document).ready(function() {
 // LANDING PAGE
-    // $("#intro").fadeOut(20)
-
-$("#intro").delay(4000).fadeOut(2000)
-
-// $("#image").click(function() {
-//     $(this).find('img').toggle();
-// });​
-
-
-// $("#infoToggler").click(function() {
-//     $(this).find('img').toggle();
-// });​
-
-// <div id="infoToggler"><img src="http://tympanus.net/PausePlay/images/play.png" width="60px" height="60px"/>
-// <img src="http://maraa.in/wp-content/uploads/2011/09/pause-in-times-of-conflict.png" width="60px" height="60px" style="display:none"/>
-// </div>
-
-
+  $("#intro").fadeOut(20)
+  // $("#intro").delay(4000).fadeOut(2000)
 
 
 // ISOTOPE
