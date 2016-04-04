@@ -57,7 +57,11 @@ end
 #   brand = "Maison Margiella"
 #   model = maison_margiela_sneaker.at_css(".product-name span").content
 #   description = maison_margiela_sneaker.at_css(".product-details-info li").content
+
+#   price = maison_margiela_sneaker.at_css(".product-price").content
+
 #   price = maison_margiela_sneaker.at_css(".lbl_ItemPriceSingleItem").content
+
 #   image_a = maison_margiela_sneaker.at('head meta[property="og:image"]')["content"].chomp("_mb.jpg")
 #   image1 = image_a + "_mu.jpg"
 #   image_b = maison_margiela_sneaker.at('head meta[property="og:image"]')["content"].chomp("_mb.jpg")

@@ -13,6 +13,7 @@
   <!-- <meta property="og:image:height" content="630"/> -->
   <!-- <meta property="og:image:width" content="1200"/> -->
   <meta property="fb:app_id" content="621104394706655" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <% end %>
 
 <!-- FACEBOOK SDK -->
@@ -42,13 +43,14 @@
   <div id="logo5">
     Laced
   </div>
-  <div id="image">
-    <img src="<%= @product.image1 %>">
-    <div id="link"><span><a href="javascript:history.back()">back</a></span>
-    </div>
-  </div>
-  <div class="fb-share-button" data-href="http://lacedny.herokuapp.com<%= product_path(@product) %>" data-layout="button"></div>
 
+  <div id="image" style="background-image: url('<%= @product.image1 %>')" >
+    <div class="fb-share-button" data-href="http://lacedny.herokuapp.com<%= product_path(@product) %>" data-layout="button"></div>
+  </div>
+
+    <div id="link">
+      <a href="javascript:history.back()"><span>Back</span></a>
+    </div>
 </div>
 
 
