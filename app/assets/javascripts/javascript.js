@@ -70,7 +70,21 @@ $("#intro").delay(4000).fadeOut(2000)
       $( this ).addClass('is-checked');
     });
   });
+
+  
+$('a').hover(function() {
+     // in
+     $(this).find('.text-content').show();
+  }, function() {
+     // out
+     $(this).find('.text-content').hide();
+  }
+);
+
+}); // end doc ready
+
 });
+
 
 
 

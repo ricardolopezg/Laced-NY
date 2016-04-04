@@ -3,26 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // ALL PRODUCTS PAGE
-body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-}
-
-#logo {
-  font-family: distant_stroke;
-  font-size: 90px;
-  color: #fff;
-  margin: 0 15px;
-}
-
-hr {
-  width: 80%;
-  margin-top: 20px;
 }
 
 .page_wrapper {
@@ -30,30 +13,32 @@ hr {
 }
 
 .sidebar {
+  height: 100%;
   background: #000;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 200px;
-  opacity: .9;
+  // bottom: 0;
+  width: 200px; // width optional but recommended 
 }
 
-.filter_select_container {
-  width: 100%;
-  margin: 10%;
-  hr {
-    margin: 0;
-  }
+.products_container {
+  margin: 0 0 250px 0; // must agree with previous width 
+  position: absolute;
+  top: 0;
+  left: 220px;
 }
 
-// .products_container {
-//   border: 1px solid yellow;
-//   position: relative;
-//   right: 0px;
+// .product_image_container {
+//   border: 1px solid red;
+//   float: left;
+//   p {
+//     text-align: center;
+//     width: 240px;
+//     position: relative;
+//     top: -235px;
+//   }
 // }
-
-
 
 .product_image {
   // border: 1px solid green;
@@ -61,43 +46,49 @@ hr {
   width: 100%;
 }
 
+// .products_container_all_display, .giuseppe_zanotti_display, .louis_vuitton_display, .maison_margiella_display, .yeezy_display {
+//   display:none;
+// }
+
+
 
 // ISOTOPE
 * { box-sizing: border-box; }
 
+body {
+  font-family: sans-serif;
+}
+
 /* ---- button ---- */
 
 .button {
+  display: inline-block;
   padding: 0.5em 1.0em;
-  background: #000;
+  background: #EEE;
   border: none;
+  border-radius: 7px;
   background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
-  color: #fff;
-  font-family: vonique64;
-  font-size: 20px;
-  height: 80px;
-  width: 160px;
-  outline: none;
+  color: #222;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-shadow: 0 1px white;
+  cursor: pointer;
 }
 
 .button:hover {
-  // background-color: #8CF;
+  background-color: #8CF;
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
   color: #222;
 }
 
 .button:active,
 .button.is-checked {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  transition-delay: .10s;
-  transition-duration: 3s;
-  color: #fff;
+  background-color: #28F;
 }
 
 .button.is-checked {
-  color: #fff;
-  // text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
 }
 
 .button:active {
@@ -119,15 +110,16 @@ hr {
   margin-right: 1px;
 }
 
-// .button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
-// .button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
+.button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
+.button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
 
 /* ---- products_container ---- */
 
 .isotope {
   // border: 1px solid black;
   position: relative;
-  left: 210px;
+  top: 0;
+  left: 220px;
 }
 
 /* clear fix */
@@ -146,6 +138,8 @@ hr {
   height: 275px;
   margin: 5px;
   padding: 10px;
+  // background: #888;
+  // color: #262524;
 }
 
 .product-item > * {
@@ -187,7 +181,6 @@ hr {
   font-size: 12px;
 }
 
-
 .text-content{
   height: 50px;
   display: none;
@@ -200,44 +193,8 @@ hr {
 // .product-item.giuseppe_zanotti { 
 //   background: #F00; 
 //   background: hsl(   0, 100%, 50%); 
-
-// .product-item.giuseppe_zanotti {
-//   background: #F00;
-//   background: hsl(   0, 100%, 50%);
-
 // }
 // .product-item.louis_vuitton  { background: #F80; background: hsl(  36, 100%, 50%); }
 // .product-item.maison_margiella      { background: #FF0; background: hsl(  72, 100%, 50%); }
 // .product-item.yeezy        { background: #0F0; background: hsl( 108, 100%, 50%); }
 
-
-/* this is css for intro fade in effect. this was moved from the ind products css file. if merge conflict, remove from ind products css page and keep this one. */
-
-
-#intro {
-    border: 1px solid black;
-    background-color:black;
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    top: 0px;
-    width: 100%;
-  }
-
-  .laced {
-    fill: white;
-    stroke: Ghostwhite;
-    stroke-width: 0.5px;
-    animation: variable 3s linear;
-  }
-
-  @keyframes variable {
-    from {
-      fill-opacity:0;
-      stroke-dasharray: 600;
-    }
-    to {
-      fill-opacity: 1;
-      stroke-dasharray: 200;
-    }
-  }

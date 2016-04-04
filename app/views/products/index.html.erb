@@ -34,7 +34,7 @@
         <a href= <%= product_path(p.id) %>>
           <div class = "product-item giuseppe_zanotti" data-category="giuseppe_zanotti">
             <%= image_tag(p.image1, id: "giuseppe_zanotti_img1", class: "product_image") %>
-            <%= p_helper(p.model) %>
+            <div class="text-content"><%= p_helper(p.model) %></div>
           </div>
         </a>
       <% end %>
@@ -47,7 +47,7 @@
         <a href= <%= product_path(p.id) %>>
           <div class = "product-item louis_vuitton" data-category="louis_vuitton">
             <%= image_tag(p.image1, id: "louis_vuitton_img1", class: "product_image") %>
-            <%= p_helper(p.model) %>
+            <div class="text-content"><%= p_helper(p.model) %></div>
           </div>
         </a>
       <% end %>
@@ -60,7 +60,7 @@
         <a href= <%= product_path(p.id) %>>
          <div class = "product-item maison_margiella" data-category="maison_margiella">
             <%= image_tag(p.image1, id: "maison_margiella_img1", class: "product_image") %>
-           <%= p_helper(p.model) %>
+           <div class="text-content"><%= p_helper(p.model) %></div>
          </div>
         </a>
       <% end %>
@@ -72,7 +72,7 @@
       <a href= <%= product_path(p.id) %>>
         <div class = "product-item yeezy" data-category="yeezy">
           <%= image_tag(p.image1, id: "yeezy_img1", class: "product_image") %>
-          <%= p_helper(p.model) %>
+          <div class="text-content"><%= p_helper(p.model) %></div>
         </div>
       </a>
     <% end %>
