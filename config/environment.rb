@@ -10,9 +10,9 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain,
   :user_name      => ENV['SENDGRID_USERNAME'],
   :password       => ENV['SENDGRID_PASSWORD'],
-  :domain         => 'localhost:3000',
+  # :domain         => 'localhost:3000',
   # :domain         => 'http://localhost:3000/contact',
-  # :domain         => 'heroku.com',
+  :domain         => 'heroku.com',
   :enable_starttls_auto => true
 }
 
