@@ -1,8 +1,8 @@
 // Place all the styles related to the contact controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// REQUEST PRODUCT - CONTACT PAGE
 
+// REQUEST PRODUCT - CONTACT PAGE
 .contact_link {
   position: relative;
   bottom: 0;
@@ -13,7 +13,7 @@
     margin-bottom: -30px;
     background: none;
   } :hover {
-      text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+      // text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
       color: #222;
   }
 }
@@ -22,7 +22,8 @@
   position: absolute;
   top: 200px;
   left: 290px;
-  font-family: vonique64;
+  font-family: 'futura';
+  letter-spacing: 10px;
   img {
     height: 100px;
     width: 150px;
@@ -36,22 +37,21 @@
   label, span, input {
     font-size: 16px;
   }
-} 
+}
 
 .bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form {
-    // font-family: Arial, Helvetica, sans-serif; 
-    font-family: vonique64;
+    font-family: 'futura';
 }
 
 .bootstrap-iso form button, .bootstrap-iso form button:hover {
   color: white !important;
-} 
+}
 
 .my-btn {
   background-color: #000;
 }
 
-.asteriskField { 
+.asteriskField {
   color: red;
 }
 

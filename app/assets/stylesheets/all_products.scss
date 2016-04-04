@@ -14,8 +14,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #logo {
-  font-family: "Diplomata+SC";
-  font-size: 70px;
+  font-family: 'Sansita One', cursive;
+  font-size: 50px;
   color: #fff;
   margin: 0 15px;
 }
@@ -58,6 +58,8 @@ hr {
 .product_image {
   // border: 1px solid green;
   width: 100%;
+  margin-bottom: 20px;
+
 }
 
 
@@ -72,8 +74,9 @@ hr {
   border: none;
   background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
   color: #fff;
-  font-family: vonique64;
-  font-size: 20px;
+  font-family: "futura";
+  font-size: 17px;
+  letter-spacing: 5px;
   height: 80px;
   width: 160px;
   outline: none;
@@ -81,7 +84,7 @@ hr {
 
 .button:hover {
   // background-color: #8CF;
-  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  text-shadow: 0 1px;
   color: #222;
 }
 
@@ -144,12 +147,12 @@ hr {
   width: 275px;
   height: 275px;
   margin: 5px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .product-item > * {
   margin: 0;
-  padding: 0;
+  padding: 20px;
   text-align: center;
 }
 
@@ -188,11 +191,11 @@ hr {
 
 
 .text-content{
-  height: 50px;
+  // height: 50px;
   display: none;
-  font-family: 'Wire One', sans-serif;
+  font-family: 'futura', sans-serif;
   color: black;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 
