@@ -10,9 +10,12 @@ class ContactsController < ApplicationController
 
     if @contact.deliver
       flash.now[:notice] = 'Thank you for your email. We will be in touch.'
+      render :new
     else
       flash.now[:error] = 'Cannot send message.'
       render :new
+
+
     end
   end
 end
