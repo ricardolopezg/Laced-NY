@@ -37,27 +37,28 @@
     text-align: center;
     padding-right: 5%;
     padding-top: 4%;
+    font-family: 'futura';
     a:link {
       text-decoration: none;
       color: black;
       text-shadow: 1px 1px 1px grey;
     }
       span {
-        font-size: 30px;
-        font-family: stroke;
+        font-size: 20px;
+        font-family: 'futura';
         text-decoration: 2px 2px 2px gray;
       }
   }
 
-@font-face {
-  font-family: stroke;
-  src: url(distant_stroke.otf)
-}
+// @font-face {
+//   font-family: stroke;
+//   src: url(distant_stroke.otf)
+// }
 
-@font-face {
-  font-family: vonique64;
-  src: url('vonique64.ttf');
-}
+// @font-face {
+//   font-family: vonique64;
+//   src: url('vonique64.ttf');
+// }
 
 #logo5 {
   /*border: 1px solid black;*/
@@ -66,7 +67,7 @@
   float: right;
   margin-top: 25px;
   margin-right: 70px;
-  font-family: stroke;
+  font-family: 'Sansita One', cursive;
   font-size: 100px;
   text-shadow: 3px 3px 3px gray;
 }
@@ -100,9 +101,10 @@
         h1, h2, h4 {
           transform: skewX(35deg);
           color:white;
-          font-family: vonique64;
+          font-family: "futura";
           text-align: right;
-          text-shadow: 2px 2px gray;
+          font-size: 25px;
+          // text-shadow: 2px 2px gray;
           // width: 100px;
         }
       }
