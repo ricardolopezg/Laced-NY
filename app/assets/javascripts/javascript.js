@@ -1,9 +1,8 @@
 $(document).ready(function() {
 // LANDING PAGE
-    // $("#intro").fadeOut(20)
+    $("#intro").fadeOut(20)
 
-$("#intro").delay(4000).fadeOut(2000)
-
+// $("#intro").delay(4000).fadeOut(2000)
 
 // $("#image").click(function() {
 //     $(this).find('img').toggle();
@@ -71,7 +70,7 @@ $("#intro").delay(4000).fadeOut(2000)
     });
   });
 
-  
+
 $('a').hover(function() {
      // in
      $(this).find('.text-content').show();
@@ -82,8 +81,6 @@ $('a').hover(function() {
 );
 
 }); // end doc ready
-
-});
 
 
 
