@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :contact
   resources :products
+  resources :contacts, only: [:new, :create]
 
   # You can have the root of your site routed with "root"
   root 'products#index'
