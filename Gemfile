@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'mail_form'
 gem 'sendgrid-ruby'
 
 gem 'nokogiri'
