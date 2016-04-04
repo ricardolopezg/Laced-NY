@@ -9,10 +9,10 @@ class ContactsController < ApplicationController
     @contact.request = request
 
     if @contact.deliver
-      flash.now[:notice] = 'Thank you for your email. We will be in touch.'
+      flash[:notice] = 'Thank you for your email. We will be in touch.'
       render :new
     else
-      flash.now[:error] = 'Cannot send message.'
+      flash[:error] = 'Cannot send message.'
       render :new
 
 
