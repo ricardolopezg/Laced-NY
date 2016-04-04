@@ -13,7 +13,7 @@
   <div class="contact_link">
     <div class = "filter_select_container">
     <hr><p id = "logo">Laced</p><hr><br><br>
-      <button class="button"><%= link_to("COLLECTION", products_path, class: "contact_link") %></button>
+      <button class="button"><a href = "javascript:history.back()" class = "contact_link">COLLECTION</a></button>
       <button class="button"><%= link_to("TALK TO US", contact_index_path, class: "contact_link") %></button>
     </div>
   </div>
@@ -35,6 +35,7 @@
     <div class="row">
       <div class="col-md-6 col-sm-6 col-xs-12">
         <form action="<%= contact_index_path %>" method="post">
+            <input type="hidden" value="<%= form_authenticity_token() %>" name="authenticity_token"/> 
           <div class="form-group ">
             <label class="control-label requiredField" for="name">Name<span class="asteriskField">*</span></label>
             <input class="form-control" id="from_name" name="from_name" type="text" placeholder="full name" />
