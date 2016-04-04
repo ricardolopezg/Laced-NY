@@ -1,21 +1,27 @@
 $(document).ready(function() {
-// LANDING PAGE  
-    $("#intro").fadeOut(20)
-  // $("#intro").delay(4000).fadeOut(2000)
+// LANDING PAGE
+    // $("#intro").fadeOut(20)
+
+$("#intro").delay(4000).fadeOut(2000)
+
+
+// $("#image").click(function() {
+//     $(this).find('img').toggle();
+// });​
+
+
+// $("#infoToggler").click(function() {
+//     $(this).find('img').toggle();
+// });​
+
+// <div id="infoToggler"><img src="http://tympanus.net/PausePlay/images/play.png" width="60px" height="60px"/>
+// <img src="http://maraa.in/wp-content/uploads/2011/09/pause-in-times-of-conflict.png" width="60px" height="60px" style="display:none"/>
+// </div>
+
+
+
 
 // ISOTOPE
-  // $('.grid').isotope({
-  //   itemSelector: '.grid-item',
-  //   masonry: {
-  //     columnWidth: 200
-  //   }
-  // });
-  // external js: isotope.pkgd.js
-
-  // init Isotope
-  // external js: isotope.pkgd.js
-
-  // init Isotope
   var $container = $('.isotope').isotope({
     itemSelector: '.product-item',
     layoutMode: 'fitRows',
@@ -30,7 +36,6 @@ $(document).ready(function() {
       }
     }
   });
-
   // filter functions
   var filterFns = {
     // show if number is greater than 50
@@ -44,7 +49,6 @@ $(document).ready(function() {
       return name.match( /ium$/ );
     }
   };
-
   // bind filter button click
   $('#filters').on( 'click', 'button', function() {
     var filterValue = $( this ).attr('data-filter');
@@ -52,13 +56,12 @@ $(document).ready(function() {
     filterValue = filterFns[ filterValue ] || filterValue;
     $container.isotope({ filter: filterValue });
   });
-
   // bind sort button click
   $('#sorts').on( 'click', 'button', function() {
     var sortByValue = $(this).attr('data-sort-by');
     $container.isotope({ sortBy: sortByValue });
   });
-  
+
   // change is-checked class on buttons
   $('.button-group').each( function( i, buttonGroup ) {
     var $buttonGroup = $( buttonGroup );
@@ -67,6 +70,7 @@ $(document).ready(function() {
       $( this ).addClass('is-checked');
     });
   });
+
   
 $('a').hover(function() {
      // in
@@ -78,6 +82,9 @@ $('a').hover(function() {
 );
 
 }); // end doc ready
+
+});
+
 
 
 
