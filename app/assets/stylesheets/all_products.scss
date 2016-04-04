@@ -40,28 +40,18 @@ hr {
 }
 
 .filter_select_container {
-  width: 100%;
-  // margin: 10%;
+  width: 90%;
+  margin: 10%;
   hr {
     margin: 0;
   }
 }
 
-// .products_container {
-//   border: 1px solid yellow;
-//   position: relative;
-//   right: 0px;
-// }
-
-
-
 .product_image {
-  // border: 1px solid green;
   width: 100%;
   margin-bottom: 20px;
 
 }
-
 
 // ISOTOPE
 * { box-sizing: border-box; }
@@ -83,7 +73,6 @@ hr {
 }
 
 .button:hover {
-  // background-color: #8CF;
   text-shadow: 0 1px;
   color: #222;
 }
@@ -99,7 +88,6 @@ hr {
 
 .button.is-checked {
   color: #fff;
-  // text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
 }
 
 .button:active {
@@ -121,13 +109,10 @@ hr {
   margin-right: 1px;
 }
 
-// .button-group .button:first-child { border-radius: 0.5em 0 0 0.5em; }
-// .button-group .button:last-child { border-radius: 0 0.5em 0.5em 0; }
 
 /* ---- products_container ---- */
 
 .isotope {
-  // border: 1px solid black;
   position: relative;
   left: 210px;
 }
@@ -191,26 +176,11 @@ hr {
 
 
 .text-content{
-  // height: 50px;
   display: none;
   font-family: 'futura', sans-serif;
   color: black;
   font-size: 15px;
 }
-
-
-// .product-item.giuseppe_zanotti {
-//   background: #F00;
-//   background: hsl(   0, 100%, 50%);
-
-// .product-item.giuseppe_zanotti {
-//   background: #F00;
-//   background: hsl(   0, 100%, 50%);
-
-// }
-// .product-item.louis_vuitton  { background: #F80; background: hsl(  36, 100%, 50%); }
-// .product-item.maison_margiella      { background: #FF0; background: hsl(  72, 100%, 50%); }
-// .product-item.yeezy        { background: #0F0; background: hsl( 108, 100%, 50%); }
 
 
 /* this is css for intro fade in effect. this was moved from the ind products css file. if merge conflict, remove from ind products css page and keep this one. */
