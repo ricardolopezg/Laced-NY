@@ -7,23 +7,25 @@
   position: relative;
   bottom: 0;
   z-index: 100;
-  color:#fff;
+  color: #fff;
   text-decoration: none;
+  line-height: 23px;
   button {
-    margin-bottom: -30px;
     background: none;
-  } :hover {
-      // text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
-      color: #222;
-  }
+  } 
+}
+
+.contact_link:hover {
+  text-shadow: 0 1px;
+  color: #222;
 }
 
 .contact_text {
   position: absolute;
   top: 200px;
-  left: 290px;
+  left: 270px;
   font-family: 'futura';
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   img {
     height: 100px;
     width: 150px;
@@ -48,7 +50,7 @@
 }
 
 .my-btn {
-  background-color: #000;
+  background-color: #grey;
 }
 
 .asteriskField {
