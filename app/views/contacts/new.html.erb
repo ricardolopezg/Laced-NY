@@ -24,10 +24,10 @@
 
 
 <% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
+  <div class="notice"><%= flash.now[:notice] %></div>
 <% end %>
 <% if flash[:error] %>
-  <div class="error"><%= flash[:error] %></div>
+  <div class="error"><%= flash.now[:error] %></div>
 <% end %>
 
 
