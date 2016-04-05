@@ -12,7 +12,7 @@
 <div id="filters" class="button-group sidebar">
     <div class = "filter_select_container">
     <p id = "logo">Laced</p><br><br>
-      <button class = "button"><a href = "javascript:history.back()" class = "contact_link">RETURN TO PRODUCTS</a></button>
+      <button class = "button"><%= link_to("RETURN TO PRODUCTS", products_path, class: "contact_link") %></a></button>
     </div>
 </div>
 
@@ -24,10 +24,10 @@
 
 
 <% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
+  <div class="notice"><%= flash.discard[:notice] %></div>
 <% end %>
 <% if flash[:error] %>
-  <div class="error"><%= flash[:error] %></div>
+  <div class="error"><%= flash.discard[:error] %></div>
 <% end %>
 
 
@@ -58,7 +58,7 @@
             <%= f.label(:subject, class: "control-label requiredField") do %>
               subject <span class="asteriskField">*</span>
             <% end %>
-            <%= f.text_field :subject, class: "form-control", id: "subject", placeholder: "what brand do you want to see on Laced?" %>
+            <%= f.text_field :subject, class: "form-control", id: "subject", placeholder: "Any brands you want to see on Laced?" %>
           </div>
           <div class="form-group">
             <%= f.label(:message, class: "control-label requiredField") do %>

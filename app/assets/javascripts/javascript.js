@@ -14,6 +14,7 @@ $(document).ready(function() {
 
 
 
+
 // ISOTOPE
   var $container = $('.isotope').isotope({
     itemSelector: '.product-item',
@@ -73,6 +74,8 @@ $('a').hover(function() {
      $(this).find('.text-content').hide();
   }
 );
+
+
 
 }); // end doc ready
 
