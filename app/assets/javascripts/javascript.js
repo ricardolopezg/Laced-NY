@@ -4,6 +4,7 @@ $(document).ready(function() {
   // $("#intro").delay(4000).fadeOut(2000)
 
 
+
 // ISOTOPE
   var $container = $('.isotope').isotope({
     itemSelector: '.product-item',
@@ -64,12 +65,6 @@ $('a').hover(function() {
   }
 );
 
-// DELETE SESSION COOKIE
-
-function del_cookie(name) {
-    document.cookie = name +
-    '=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
-    }
 
 
 }); // end doc ready
