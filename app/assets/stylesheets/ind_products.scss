@@ -27,16 +27,23 @@
   }
 
 .show_btn:link {
-  display: block;
+  display: inline;
   text-decoration: none;
   color: black;
   text-shadow: 1px 1px 1px grey;
   text-align: center;
+  position: relative;
+  left: 30%;
 }
   span {
     font-size: 30px;
     font-family: "futura";
     text-decoration: 2px 2px 2px gray;
+  }
+
+  .show_btn_move {
+    position: relative;
+    left: 30%;
   }
 
 // FACEBOOK SHARING

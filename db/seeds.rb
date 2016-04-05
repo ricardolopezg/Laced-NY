@@ -36,8 +36,9 @@ for i in 0..zanotti_url.length-1 do
  images = doc.css(".images a").map{|links| links["data-image"]}
  image1 = "http:" + images[0]
  image2 = "http:" + images[1]
+ src_link = zanotti_url[i]
 
-Product.create(category: "shoes", category_type: "sneakers", brand: brand, model: model, description: description, price: price, image1: image1, image2: image2)
+Product.create(category: "shoes", category_type: "sneakers", brand: brand, model: model, description: description, price: price, image1: image1, image2: image2, src_link: src_link)
 end
 
 
@@ -113,8 +114,9 @@ for i in 0..yeezy_array.length-1 do
   price = yeezy.at("span.price").content
   image1 = yeezy.css('div.product-image a#main-image')[0]["href"]
   image2 = image1.chomp('1.jpg') + "2.jpg"
+  src_link = yeezy_array[i]
 
-  Product.create(category: "shoes", category_type: "sneakers", brand: brand, model: model, description: description, price: price, image1: image1, image2: image2)
+  Product.create(category: "shoes", category_type: "sneakers", brand: brand, model: model, description: description, price: price, image1: image1, image2: image2, src_link: src_link)
 end
 
 

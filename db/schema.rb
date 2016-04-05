@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329184813) do
+ActiveRecord::Schema.define(version: 20160405180254) do
 
   create_table "products", force: :cascade do |t|
     t.string   "category"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160329184813) do
     t.string   "image2"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "src_link"
   end
 
 end
