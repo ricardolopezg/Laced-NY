@@ -1,7 +1,17 @@
 $(document).ready(function() {
 // LANDING PAGE
-  $("#intro").fadeOut(20)
-  // $("#intro").delay(4000).fadeOut(2000)
+  // $("#intro").fadeOut(20)
+  // $("#intro").fadeIn(3000)
+  // setTimeout(function() {
+  //   window.location.href = "/products";
+  // }, 6000);
+
+// var something() = (function() {
+//     setTimeout(function() {
+//     window.location.href = "/products";
+//   }, 6000);
+//         })
+
 
 
 // ISOTOPE
