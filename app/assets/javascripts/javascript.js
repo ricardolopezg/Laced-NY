@@ -3,6 +3,14 @@ $(document).ready(function() {
   $("#intro").fadeOut(20)
   // $("#intro").delay(4000).fadeOut(2000)
 
+// DELETE SESSION COOKIE
+function del_cookie(name) {
+    document.cookie = name +
+    '=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
+    }
+
+del_cookie(_group_project_session)
+
 
 // ISOTOPE
   var $container = $('.isotope').isotope({
@@ -64,12 +72,6 @@ $('a').hover(function() {
   }
 );
 
-// DELETE SESSION COOKIE
-
-function del_cookie(name) {
-    document.cookie = name +
-    '=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
-    }
 
 
 }); // end doc ready
