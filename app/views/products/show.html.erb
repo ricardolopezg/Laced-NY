@@ -56,9 +56,17 @@
 
 <div id="leftContainer">
   <div id="descriptionBox">
-    <h1><%= @product.model %></h1>
-    <h4><%= @product.description %></h4>
-    <h2>$<%= @product.price %>0</h2>
+    <div class="descSquare" id="header">
+      <h1><%= @product.model %></h1>
+    </div>
+
+    <div class="descSquare" id="shoeDescription">
+      <h4><%= @product.description %></h4>
+    </div>
+
+    <div class="descSquare" id="price">
+      <h2>$<%= @product.price %>0</h2>
+    </div>
   </div>
 
 </div>
