@@ -5,12 +5,12 @@ Tech Used:
 * CSS  
 * SASS 
 * Ruby on Rails 
-*SQLITE3 
-*PostgreSQL 
+* SQLITE3 
+* PostgreSQL 
 * SVG 
 * JQUERY 
 * Ruby Gem - Nokogiri
 
 
 
-** App can be found on http://lacedny.herokuapp.com
+###### App can be found on http://lacedny.herokuapp.com
